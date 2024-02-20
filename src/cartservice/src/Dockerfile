@@ -30,7 +30,7 @@ RUN dotnet publish cartservice.csproj \
     --no-restore
 
 # https://mcr.microsoft.com/product/dotnet/runtime-deps
-FROM mcr.microsoft.com/dotnet/runtime-deps:8.0.1-alpine3.18-amd64@sha256:6995921cfa678fe55dfa02c455f379f31bdd589a6eaad6bb714ff82deb441f8f
+FROM mcr.microsoft.com/dotnet/runtime-deps:8.0.1-alpine3.18-amd64
 
 WORKDIR /app
 COPY --from=builder /cartservice .
